@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with Tutor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Chat with a Tutor</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="map.html">Find Locations</a>
+        </nav>
+    </header>
+
+    <section class="chat-section">
+        <div id="chat-box">
+            <div class="message tutor">Hello! How can I help you with your studies today?</div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="userInput" placeholder="Type your message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 TutorMatch</p>
+    </footer>
+
+    <script>
+        function sendMessage() {
+            const inputField = document.getElementById('userInput');
+            const userMessage = inputField.value;
+            if (userMessage.trim()) {
+                const chatBox = document.getElementById('chat-box');
+
+                // Display the user's message
+                const userDiv = document.createElement('div');
+                userDiv.className = 'message user';
+                userDiv.textContent = userMessage;
+                chatBox.appendChild(userDiv);
+
+                // Simulate tutor's response
+                setTimeout(() => {
+                    const tutorResponse = document.createElement('div');
+                    tutorResponse.className = 'message tutor';
+                    tutorResponse.textContent = generateMockResponse(userMessage);
+                    chatBox.appendChild(tutorResponse);
+
+                    // Scroll chat to the bottom
+                    chatBox.scrollTop = chatBox.scrollHeight;
+                }, 1000);
+
+                // Clear the input field
+                inputField.value = '';
+            }
+        }
+
+        function generateMockResponse(userMessage) {
+            const responses = [
+                "That's a great question! Let me explain...",
+                "Have you tried reviewing your notes on this topic?",
+                "I can help you with that, let's go over the key concepts.",
+                "Don't worry, you're doing great! Let's take it step by step.",
+                "Here's how you can solve this problem...",
+            ];
+
+            return responses[Math.floor(Math.random() * responses.length)];
+        }
+    </script>
+</body>
+</html>
