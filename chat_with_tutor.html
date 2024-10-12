@@ -85,9 +85,9 @@
     <header>
         <h1>Chat with a Tutor</h1>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="login.html">Login</a>
-            <a href="map.html">Find Locations</a>
+            <a href="Edison_Hackathon_Website.html">Home</a>
+            <a href="login_page.html">Login</a>
+            <a href="tutors_near_me.html">Find Locations</a>
         </nav>
     </header>
 
@@ -112,24 +112,23 @@
             if (userMessage.trim()) {
                 const chatBox = document.getElementById('chat-box');
 
-                // Display the user's message
+               
                 const userDiv = document.createElement('div');
                 userDiv.className = 'message user';
                 userDiv.textContent = userMessage;
                 chatBox.appendChild(userDiv);
 
-                // Simulate tutor's response
                 setTimeout(() => {
                     const tutorResponse = document.createElement('div');
                     tutorResponse.className = 'message tutor';
                     tutorResponse.textContent = generateMockResponse(userMessage);
                     chatBox.appendChild(tutorResponse);
 
-                    // Scroll chat to the bottom
+                    
                     chatBox.scrollTop = chatBox.scrollHeight;
                 }, 1000);
 
-                // Clear the input field
+               
                 inputField.value = '';
             }
         }
