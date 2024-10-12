@@ -135,11 +135,11 @@
 
         function generateMockResponse(userMessage) {
             const responses = [
-                "That's a great question! Let me explain...",
+                "That's a great question! Let me explain. In order to solve this, just bring up two fingers, bring up another, and count them.",
                 "Have you tried reviewing your notes on this topic?",
-                "I can help you with that, let's go over the key concepts.",
-                "Don't worry, you're doing great! Let's take it step by step.",
-                "Here's how you can solve this problem...",
+                "I can help you with that, let's go over the key concepts. Addition is a key concept, so you should start with understanding that.",
+                "Don't worry, you're doing great! Let's take it step by step. If we have 2, and then multiply it by 2, you should get 4, which is your answer.",
+                "Here's how you can solve this problem. Add 2 to 2, and you should get 4.",
             ];
 
             return responses[Math.floor(Math.random() * responses.length)];
