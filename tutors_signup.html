@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - TutorMatch</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        .login-section {
+            background-color: white;
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .login-section h2 {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input[type="email"],
+        input[type="password"],
+        input[type = "Subject"],
+        input[type = "Price"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<style>
+    h1{
+        background-color: #4CAF50;
+        color: white;
+        padding: 1rem;
+        text-align: center;     
+    }
+</style>
+<body>
+    <header>
+        <nav>
+            <h1>Login As Tutors</h1>
+            <a href="index.html">Home</a>
+        </nav>
+    </header>
+    <section class="login-section">
+        <h2>Login to your account</h2>
+        <form>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="Subject">Subject:</label>
+            <input type="Subject" id="Subject" name="Subject" required>
+
+            <label for="Price">Price:</label>
+            <input type="Price" id="Price" name="Price" required>
+
+            <button type="submit" class="btn">Login</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2024 TutorMatch</p>
+    </footer>
+</body>
+</html>
